@@ -1,7 +1,7 @@
 import path from "path"
-import { defineConfig } from "next"
 
-export default defineConfig({
+/** @type {import('next').NextConfig} */
+export default {
   experimental: {
     appDir: true,
     /** allow imports that live outside apps/frontend */
@@ -27,4 +27,4 @@ export default defineConfig({
     }
     return config
   },
-})
+}
