@@ -2,39 +2,23 @@
 
 import { motion } from "framer-motion"
 import { useMobile } from "@/hooks/use-mobile"
+import { RichTextRenderer } from "@/components/rich-text-renderer"
+import type { Experience } from "@/lib/api"
 
-const experiences = [
-  {
-    title: "Senior Frontend Engineer",
-    company: "Tech Innovations Inc.",
-    period: "2021 - Present",
-    description:
-      "Lead the frontend development team in building a SaaS platform. Implemented new features, improved performance, and mentored junior developers.",
-  },
-  {
-    title: "Frontend Developer",
-    company: "Digital Solutions Co.",
-    period: "2019 - 2021",
-    description:
-      "Developed responsive web applications using React and TypeScript. Collaborated with designers and backend engineers to deliver high-quality products.",
-  },
-  {
-    title: "Web Developer",
-    company: "Creative Agency",
-    period: "2017 - 2019",
-    description:
-      "Built websites and web applications for various clients. Worked with HTML, CSS, JavaScript, and WordPress.",
-  },
-  {
-    title: "Intern",
-    company: "Startup Hub",
-    period: "2016 - 2017",
-    description: "Assisted in developing web applications and learned modern web development practices.",
-  },
-]
+interface TimelineProps {
+  experiences: Experience[]
+}
 
-export function Timeline() {
+export function Timeline({ experiences }: TimelineProps) {
   const isMobile = useMobile()
+
+  const formatDate = (dateString: string, current: boolean, locale = "en") => {
+    if (current) return locale === "es" ? "Presente" : "Present"
+    return new Date(dateString).toLocaleDateString(locale, {
+      year: "numeric",
+      month: "short",
+    })
+  }
 
   return (
     <div
@@ -46,7 +30,7 @@ export function Timeline() {
     >
       {experiences.map((experience, index) => (
         <div
-          key={index}
+          key={experience.id}
           className={`relative z-10 flex items-center ${index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"}`}
         >
           <motion.div
@@ -60,11 +44,53 @@ export function Timeline() {
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl blur opacity-25 hover:opacity-100 transition duration-1000 hover:duration-200"></div>
 
               <div className="relative">
-                <h3 className="text-xl font-bold">{experience.title}</h3>
-                <div className="text-zinc-400 mb-4">
-                  {experience.company} | {experience.period}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-grow">
+                    <h3 className="text-xl font-bold">{experience.title}</h3>
+                    <div className="text-purple-400 font-medium">{experience.company}</div>
+                    {experience.location && <div className="text-zinc-500 text-sm">{experience.location}</div>}
+                  </div>
+                  {experience.companyLogo && (
+                    <img
+                      src={experience.companyLogo.url || "/placeholder.svg"}
+                      alt={experience.companyLogo.alt}
+                      className="w-12 h-12 rounded-lg object-cover"
+                    />
+                  )}
                 </div>
-                <p className="text-zinc-300">{experience.description}</p>
+
+                <div className="text-zinc-400 mb-4">
+                  {formatDate(experience.startDate, false)} -{" "}
+                  {experience.current ? formatDate("", true) : formatDate(experience.endDate!, false)}
+                </div>
+
+                <div className="mb-4">
+                  <RichTextRenderer content={experience.description} />
+                </div>
+
+                {experience.technologies.length > 0 && (
+                  <div className="mb-4">
+                    <div className="text-sm font-medium text-zinc-400 mb-2">Technologies:</div>
+                    <div className="flex flex-wrap gap-2">
+                      {experience.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className="px-2 py-1 text-xs bg-zinc-700/50 text-zinc-300 rounded-md">
+                          {tech.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {experience.achievements.length > 0 && (
+                  <div>
+                    <div className="text-sm font-medium text-zinc-400 mb-2">Key Achievements:</div>
+                    <ul className="list-disc list-inside space-y-1 text-zinc-300 text-sm">
+                      {experience.achievements.map((achievement, achIndex) => (
+                        <li key={achIndex}>{achievement.achievement}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>

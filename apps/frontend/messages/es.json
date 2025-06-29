@@ -1,0 +1,75 @@
+{
+  "navigation": {
+    "about": "Acerca de",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "resume": "Currículum"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Shine Kyaw Kyaw Aung",
+    "subtitle": "Ingeniero de Software y Desarrollador Creativo",
+    "description": "Creo experiencias digitales excepcionales con código, creatividad y pasión por la innovación.",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Contáctame"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "subtitle": "Mi trasfondo y trayectoria",
+    "description1": "Soy un ingeniero de software apasionado con experiencia construyendo aplicaciones web y productos digitales. Me especializo en desarrollo frontend con React y Next.js, pero también me siento cómodo trabajando con tecnologías backend.",
+    "description2": "Mi viaje en tecnología comenzó con una base sólida en desarrollo de software. He trabajado con varias empresas para crear experiencias digitales intuitivas, eficientes y accesibles.",
+    "description3": "Cuando no estoy programando, puedes encontrarme explorando nuevas tecnologías, contribuyendo a proyectos de código abierto y manteniéndome al día con las últimas tendencias de la industria.",
+    "name": "Nombre",
+    "email": "Correo",
+    "location": "Ubicación",
+    "availability": "Disponibilidad",
+    "availabilityStatus": "Abierto a oportunidades",
+    "downloadResume": "Descargar Currículum"
+  },
+  "skills": {
+    "title": "Mis Habilidades",
+    "subtitle": "Tecnologías con las que trabajo"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Algunos de mis trabajos recientes",
+    "viewAll": "Ver Todos los Proyectos",
+    "liveDemo": "Demo en Vivo",
+    "sourceCode": "Código Fuente"
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "subtitle": "Mi trayectoria profesional"
+  },
+  "blog": {
+    "title": "Últimos Artículos",
+    "subtitle": "Pensamientos e ideas",
+    "readMore": "Leer Más",
+    "viewAllPosts": "Ver Todas las Publicaciones"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Trabajemos juntos",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Tu Correo",
+      "subject": "Asunto",
+      "message": "Tu Mensaje",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando..."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "status": "Estado Actual",
+      "statusMessage": "Disponible para trabajo freelance y oportunidades de tiempo completo"
+    },
+    "success": "¡Mensaje enviado!",
+    "successDescription": "Gracias por contactarme. Te responderé pronto."
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "navigation": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "blog": "Blog",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Shine Kyaw Kyaw Aung",
+    "subtitle": "Software Engineer & Creative Developer",
+    "description": "I craft exceptional digital experiences with code, creativity, and a passion for innovation.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My background and journey",
+    "description1": "I'm a passionate software engineer with experience building web applications and digital products. I specialize in frontend development with React and Next.js, but I'm also comfortable working with backend technologies.",
+    "description2": "My journey in tech started with a strong foundation in software development. I've worked with various companies to create intuitive, performant, and accessible digital experiences.",
+    "description3": "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, and staying up-to-date with the latest industry trends.",
+    "name": "Name",
+    "email": "Email",
+    "location": "Location",
+    "availability": "Availability",
+    "availabilityStatus": "Open to opportunities",
+    "downloadResume": "Download Resume"
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "Technologies I work with"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Some of my recent work",
+    "viewAll": "View All Projects",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey"
+  },
+  "blog": {
+    "title": "Latest Articles",
+    "subtitle": "Thoughts and insights",
+    "readMore": "Read More",
+    "viewAllPosts": "View All Posts"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "status": "Current Status",
+      "statusMessage": "Available for freelance work and full-time opportunities"
+    },
+    "success": "Message sent!",
+    "successDescription": "Thanks for reaching out. I'll get back to you soon."
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  }
+}
