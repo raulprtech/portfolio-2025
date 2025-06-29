@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Github, Linkedin, Mail, Twitter } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -37,7 +38,7 @@ export default function Portfolio() {
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <span className="block">Hi, I'm</span>
+              <span className="block">Hi, I&apos;m</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
                 Shine Kyaw Kyaw Aung
               </span>
@@ -128,9 +129,11 @@ export default function Portfolio() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl opacity-70"></div>
               <div className="relative aspect-square rounded-xl overflow-hidden border border-zinc-800">
-                <img
+                <Image
                   src="/placeholder.svg?height=600&width=600"
                   alt="Shine Kyaw Kyaw Aung"
+                  width={600}
+                  height={600}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -146,16 +149,16 @@ export default function Portfolio() {
             <div className="space-y-6">
               <GlassmorphicCard>
                 <p className="text-lg text-zinc-300">
-                  I'm a passionate software engineer with experience building web applications and digital products. I
-                  specialize in frontend development with React and Next.js, but I'm also comfortable working with
+                  I&apos;m a passionate software engineer with experience building web applications and digital products. I
+                  specialize in frontend development with React and Next.js, but I&apos;m also comfortable working with
                   backend technologies.
                 </p>
                 <p className="text-lg text-zinc-300 mt-4">
-                  My journey in tech started with a strong foundation in software development. I've worked with various
+                  My journey in tech started with a strong foundation in software development. I&apos;ve worked with various
                   companies to create intuitive, performant, and accessible digital experiences.
                 </p>
                 <p className="text-lg text-zinc-300 mt-4">
-                  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
+                  When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects,
                   and staying up-to-date with the latest industry trends.
                 </p>
 
